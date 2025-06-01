@@ -1,0 +1,119 @@
+/* src/components/CommonNav.css */
+.header {
+  background-color: #fef7ff;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;      /* 좌우 여백 */
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.logo-text-bold {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff005f;
+}
+
+.logo-text-regular {
+  font-size: 16px;
+  color: #000;
+  margin-left: 4px;
+}
+
+.logo-sub {
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #000;
+  margin-left: 44px;
+}
+
+.nav-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-size: 18px;
+
+  /* 회색 분리선은 메뉴 아래에만 */
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 14px;
+}
+
+.nav-menu a,
+.ranking-button {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-menu a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-wrapper:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffccd8;
+  border: 1px solid #ffcddc;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 4px 0;
+  z-index: 100;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #fdbdcf;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: #ff005f;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logout-icon {
+  width: 20px;
+  height: 20px;
+}
